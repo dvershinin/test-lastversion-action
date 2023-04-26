@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: dvershinin/lastversion-action@main
+        uses: dvershinin/lastversion-action@v0.0.1
         with:
           repository: 'nginx'
       # Use the output from the `hello` step
@@ -15,7 +15,7 @@ jobs:
         run: echo "The time was ${{ steps.hello.outputs.last_version }}"
       - name: Download stable NGINX
         id: download-nginx
-        uses: dvershinin/lastversion-action@main
+        uses: dvershinin/lastversion-action@v0.0.1
         with:
           repository: 'nginx'
           action: 'unzip'
@@ -24,7 +24,7 @@ jobs:
         run: ls -al
       - name: Download stable Mautic
         id: mautic-lastversion
-        uses: dvershinin/lastversion-action@main
+        uses: dvershinin/lastversion-action@v0.0.1
         with:
           repository: 'mautic/mautic'
           extra_args: '--pre'
