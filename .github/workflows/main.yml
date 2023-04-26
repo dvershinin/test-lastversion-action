@@ -27,5 +27,6 @@ jobs:
         uses: dvershinin/lastversion-action@main
         with:
           repository: 'mautic/mautic'
+          extra_args: '--pre'
       - name: Echo mautic last version
         run: echo "The time was ${{ steps.mautic-lastversion.outputs.last_version }}"
